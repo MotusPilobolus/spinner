@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var userZipCode: UITextField!
-   
+    @IBOutlet weak var userCityState: UITextField!
+    
     @IBOutlet weak var lblWait: UILabel!
     
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
     @IBAction func buttonWasPressed(_ sender: Any) {
         lblWait.text = "Spinning for \(userZipCode.text!)..."
         userZipCode.resignFirstResponder()
+        userCityState.resignFirstResponder()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
